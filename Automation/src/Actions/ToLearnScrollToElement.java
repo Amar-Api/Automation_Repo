@@ -20,18 +20,19 @@ public static void main(String[] args) throws InterruptedException
 	WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
 	
 	
-	driver.get("https://demowebshop.tricentis.com/");
-	//WebElement searchLink=  driver.findElement(By.linkText("Search"));
+	driver.get("https://www.shoppersstack.com/");
+	WebElement searchLink=  driver.findElement(By.linkText("Search"));
 	
 	Actions act= new Actions(driver);
-	//act.scrollToElement(searchLink).perform();
+	Thread.sleep(6000);
+	act.scrollToElement(searchLink).perform();
 	
-	//Thread.sleep(2000);
-	//driver.findElement(By.linkText("14.1-inch Laptop")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.linkText("14.1-inch Laptop")).click();
 	
-	act.scrollByAmount(0, 500).perform();
-	Thread.sleep(3000);
-	act.scrollByAmount(0, -500).perform();
+//	act.scrollByAmount(0, 500).perform();
+//	Thread.sleep(3000);
+//	act.scrollByAmount(0, -500).perform();
 	
 }
 }

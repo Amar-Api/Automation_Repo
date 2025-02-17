@@ -27,6 +27,6 @@ public class TestScript1 extends BaseClass
 		driver.findElement(By.xpath("//input[@value= 'Log in']")).click();
 		
 		assertEquals(driver.getTitle(), "Demo Web", "Home Page Is Not Displayed");
-		Reporter.log("Home PAhe is displayed",true);
+		Reporter.log("Home Page is displayed",true);
     }
 }

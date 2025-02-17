@@ -22,11 +22,11 @@ public static void main(String[] args) throws InterruptedException
 	Point flipkartPosition = driver.manage().window().getPosition();
 	Thread.sleep(2000);
 
-	switchToWindow(driver,"ebay");
+	switchToWindow(driver,"ebay");//switchToWindow(driver, "ebay"); का अर्थ है कि Selenium ड्राइवर (ब्राउज़र) को "ebay" नाम या टाइटल वाले Browser tab या window पर switch करना है।
 	Point ebayPosition=  driver.manage().window().getPosition();
 	Thread.sleep(2000);
 	
-	driver.manage().window().setPosition(flipkartPosition);
+	driver.manage().window().setPosition(flipkartPosition);//we are setting flipkart position in ebay window position
 	Thread.sleep(2000);
 	
 	switchToWindow(driver,"flipkart");

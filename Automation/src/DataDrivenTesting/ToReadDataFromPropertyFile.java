@@ -14,14 +14,15 @@ public class ToReadDataFromPropertyFile
 {
 public static void main(String[] args) throws IOException
 {
-	// Step 1: craete object for FileInputStream
+	// Step 1: craete object for FileInputStream and  loading properties file with file location
 	FileInputStream fis= new FileInputStream("./testdata/skillraryData.properties");
+	//FileInputStream obtains input bytes from a file
 	
 	// Step 2: create respective file type object
 	Properties prop= new Properties();
 	
 	// Step 3: Call read method
-	prop.load(fis);
+	prop.load(fis);      //load()=>>Reads a property list (key and element pairs) from the inputbyte stream.
 	String url= prop.getProperty("Url");
 	String username= prop.getProperty("Username");
 	String password= prop.getProperty("Password");

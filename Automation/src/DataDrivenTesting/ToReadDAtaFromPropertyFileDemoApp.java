@@ -12,8 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ToReadDAtaFromPropertyFileDemoApp 
 {
-private static final CharSequence Email = null; 
-private static final CharSequence Password = null;
 
 public static void main(String[] args) throws IOException 
 {

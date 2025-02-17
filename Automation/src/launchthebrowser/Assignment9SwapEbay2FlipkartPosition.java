@@ -33,7 +33,7 @@ public class Assignment9SwapEbay2FlipkartPosition
 			
 			if (url.contains("flipkart")) 
 			{
-				fp = driver.manage().window().getPosition();
+				fp = driver.manage().window().getPosition();//fp=(x,y)
 			}
 			if (url.contains("ebay"))
 			{
@@ -62,7 +62,8 @@ public class Assignment9SwapEbay2FlipkartPosition
 			}
 			if(actUrl.contains("ebay"))
 			{
-				driver.manage().window().setPosition(fp);
+				driver.manage().window().setPosition(fp);//fp contains (x,y) coordinate of flipkart . And we are setting 
+				        // flipkart coordinate in ebay coordinate.
 			}
 		}
 		Thread.sleep(4000);

@@ -1,4 +1,4 @@
-package Actions;
+ package Actions;
 
 import java.awt.Desktop.Action;
 import java.time.Duration;
@@ -22,8 +22,8 @@ public static void main(String[] args)
 	
 	driver.get("https://demowebshop.tricentis.com/");
 	Actions act= new Actions(driver);
-	//act.contextClick().perform();
+	//act.contextClick().perform();  // contextClick() without Argument
 	WebElement registerLink= driver.findElement(By.linkText("Register"));
-	act.contextClick(registerLink).perform();
-}
+	act.contextClick(registerLink).perform();   // contextClick(registerLink) With Argument
+} 
 }

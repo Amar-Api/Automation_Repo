@@ -15,7 +15,8 @@ public class Windowscrolling {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-		driver.get("https://demowebshop.tricentis.com/");
+		//driver.get("https://demowebshop.tricentis.com/");
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		

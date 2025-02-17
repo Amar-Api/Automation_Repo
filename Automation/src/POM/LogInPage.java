@@ -10,7 +10,7 @@ import bsh.This;
 public class LogInPage 
 {
 
-	//1
+	//1 DECLARATION
 	@FindBy(id="Email")
 	private WebElement emailTextField;
 	
@@ -21,14 +21,14 @@ public class LogInPage
 	private WebElement loginButton;
 	
 	
-	//2
+	//2 INITIALIZATION  (Only Once)
 	public  LogInPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
 	
-	//3
+	//3 Getter method
 	public WebElement getEmailTextField() 
 	{
 		return emailTextField;

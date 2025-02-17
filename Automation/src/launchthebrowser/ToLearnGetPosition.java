@@ -13,6 +13,7 @@ public class ToLearnGetPosition {
 		//driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
 		Point position= driver.manage().window().getPosition();
+		System.out.println(position);
 		System.out.println("X: "+position.getX());
 		System.out.println("X: "+position.getY());
 		

@@ -14,14 +14,18 @@ public class ToLearnCrossBrowserTesting
 {
 public WebDriver driver;
 
-@Parameters("Browser")
+//@Parameters("Browser")    //=========>>>1)  it work from suite files
 @Test
 
 
-//public void launch(@Optional("chrome") String browsername)  // to execute CrossBrowserTesting direct 
-                                                             // from here we use @Optional
+public void launch(@Optional("chrome") String browsername)  // to execute CrossBrowserTesting direct 
+                                                             // from here we use @Optional("chrome"), from it
+// we pass different different browser name like firefox,edge etc in place of "chrome"
 
-public void launch(String browsername)
+
+
+//public void launch(String browsername)  //========>>>2)   it run from suite
+
  {
 	if( browsername.equals("chrome"))
 	{

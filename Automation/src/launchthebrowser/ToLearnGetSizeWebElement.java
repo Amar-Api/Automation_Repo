@@ -13,8 +13,9 @@ public static void main(String[] args)
 	driver.manage().window().maximize();
 	driver.get("https://demowebshop.tricentis.com/");
 	Dimension size= driver.findElement(By.xpath("//input[@value='Search']")).getSize();
-	System.out.println(size.getHeight());
-	System.out.println(size.getWidth());
+	System.out.println(size);
+	System.out.println("Height="+size.getHeight());
+	System.out.println("Width="+size.getWidth());
 	driver.close();
 	
 }

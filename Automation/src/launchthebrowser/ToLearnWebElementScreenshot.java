@@ -19,7 +19,9 @@ public static void main(String[] args) throws IOException
 	
 	driver.get("https://demowebshop.tricentis.com/");
 	
-	File temp= driver.findElement(By.xpath("//img[@alt='Tricentis Demo Web Shop']")).getScreenshotAs(OutputType.FILE);
+	File temp= driver.findElement(By.xpath("//img[@alt='Tricentis Demo Web Shop']"))
+			.getScreenshotAs(OutputType.FILE);
+	
 	File dest= new File("./TakeScreenshot/elementImage.png");
 	FileHandler.copy(temp, dest);
 }

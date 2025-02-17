@@ -40,20 +40,22 @@ public class ListenereImplementation extends BaseClass implements ITestListener
 	public void onTestFailure(ITestResult result)
 	{
 		System.out.println(driver);
-		String methodName = result.getName(); // result.getNAme()--give current Method Nmae..
+		String methodName = result.getName(); // result.getName()--give current Method Nmae..
 		//String timeStamp= LocalDateTime.now().toString().replace(":", "_");
 				
 				
-		TakesScreenshot ts= (TakesScreenshot) driver;
+		TakesScreenshot ts= (TakesScreenshot)  BaseClass.driver;// driver is not initialized in this class
+		// so we make driver as static
 		File temp= ts.getScreenshotAs(OutputType.FILE);
 		//File dest= new File("./TakeScreenshot/"+methodName+timeStamp+".png");
-		File dest= new File("./TakeScreenshot/Listner.png");
+		File dest= new File("./TakeScreenshot/Listner1.png");
 		try {
 			FileHandler.copy(temp, dest);
 		}
 		catch (IOException e) 
 		{
-			e.printStackTrace();
+			e.printStackTrace();//Prints the exception name, description (message),
+			                    //and the stack trace (the method call hierarchy) to System.err.
 		}
 	}
 

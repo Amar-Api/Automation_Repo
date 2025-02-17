@@ -21,7 +21,7 @@ public static void main(String[] args)
 	
 	driver.get("https://www.shoppersstack.com/products_page/24");
 	driver.findElement(By.id("Check Delivery")).sendKeys("560010");
-	//driver.findElement(By.id("Check")).click();....ElementclickInterceptedException found;
+	//driver.findElement(By.id("Check")).click();//....ElementclickInterceptedException found;
 	
 	
 	WebElement checkButton= driver.findElement(By.id("Check"));

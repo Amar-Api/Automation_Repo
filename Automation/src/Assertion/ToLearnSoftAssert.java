@@ -29,7 +29,7 @@ public class ToLearnSoftAssert
        
        driver.findElement(By.linkText("Log in")).click();
        
-       soft.assertEquals(driver.getTitle(), "Demo Web Shop. Login", "login Page is not Displayed");
+       soft.assertEquals(driver.getTitle(), "Demo Web Shop. Logi", "login Page is not Displayed");
        Reporter.log("Login Page is Displayed",true);
        
        
